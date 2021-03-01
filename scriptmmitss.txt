@@ -1,0 +1,20 @@
+setlocal EnableDelayedExpansion
+
+rem --------- PSU Variables ---------
+
+set psuuser=portaldu
+
+set psuserver=216.24.220.70  
+
+rem ----set psuserver= platoon.its.pdx.edu
+
+set destinationdir=mmitss
+
+set portnumber=
+
+set keyfile="N:\Desktop\.ssh\private.ppk" 
+
+"P:\Programs\tools\pscp.exe" -P 22 -v -l %psuuser% -i %keyfile% "N:\Desktop"\test1.txt %psuserver%:%destinationdir%
+
+
+
